@@ -1,0 +1,32 @@
+loop for 1 to 3
+
+    input zipcode from user
+
+    if zipcode is not an integer
+        display error
+        continue
+
+    if zipcode is less than 10000 or greater than 99999
+        display error
+        continue 
+
+    call api server to translate zipcode to lat/long
+
+    if response is not 200
+        display error
+        continue
+
+    extract lat/long from response
+
+    call api server to retrieve the weather information using lat/long
+
+    if response is not 200
+        display error
+        continue
+
+    display weather information    
+    exit program
+
+inform user they used the max number of tries
+exit program
+
