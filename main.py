@@ -17,7 +17,7 @@ os.system('cls' if os.name == 'nt' else 'clear')
 def validate_zip(zipcode: str):
     """Validate and typecast user-supplied zip code to integer"""
 
-    # ensure that the value is a value integer
+    # ensure that the value is a valid integer
     zipint = int(zipcode)
 
     # ensure that the value is within the approximate range of a zip code

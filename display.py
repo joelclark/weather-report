@@ -1,6 +1,6 @@
 """Display routines"""
 
-from termcolor import colored, cprint
+from termcolor import colored
 from responses import ZipTranslateResponse, WeatherDataResponse
 
 
@@ -53,7 +53,7 @@ def print_welcome_banner():
     """Print the welcome banner for the program"""
     print("Welcome to the Weather Report!")
     print("By Joel Clark, 2023")
-    print("Sophia Learning, Intro to Pythion")
+    print("Sophia Learning, Intro to Python")
 
 
 def print_prompt():

@@ -5,13 +5,20 @@ class ZipTranslateResponse:
     """Encapsulation of the zip translation service's response"""
 
     def __init__(self, json):
+
+        # break out the fields needed for display
+
         self.lat = float(json['lat'])
         self.long = float(json['lon'])
         self.location = json['name']
 
 
 class WeatherDataForecast:
+
     def __init__(self, json):
+
+        # break out the fields needed for display
+
         main = json['main']
         weather = json['weather'][0]
         wind = json['wind']
@@ -25,6 +32,10 @@ class WeatherDataForecast:
 
     def wind_dir(self):
         """Convert the wind direction from degrees to a compass direction"""
+
+        # use a ladder of if statements to determine which direction the
+        # degrees are mapped to
+
         if self.wind_deg > 348.75:
             return "N"
         elif self.wind_deg > 326.25:
